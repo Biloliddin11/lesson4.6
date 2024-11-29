@@ -1,35 +1,100 @@
-let users = [];
+{
+	// requirement is to find the smallest number
+	function findSmallestInt(arr) {
+		return Math.min(...arr)
+	}
 
-function signUp() {
-    try {
-        let name = prompt("Sign Up - Enter your name:");
-        let username = prompt("Sign Up - Enter your username:");
-        let password = prompt("Sign Up - Enter your password:");
-
-        if (name.length < 1) throw new Error("Name must be at least 1 character long");
-        if (username.length < 4) throw new Error("Username must be at least 4 characters long");
-        if (password.length < 6) throw new Error("Password must be at least 6 characters long");
-
-        let user = { name, username, password };
-        users.push(user);
-        console.log("User register successfully!");
-    } catch (error) {
-        console.error("Error during sign up: " + error.message);
-    }
+	console.log(findSmallestInt([56, 2, 5, 8, 20]))
 }
 
-function signIn() {
-    try {
-        let username = prompt("Sign In - Enter your username:");
-        let password = prompt("Sign In - Enter your password:");
-
-        let user = users.find(user => user.username === username && user.password === password);
-        if (!user) throw new Error("Invalid username or password.");
-        console.log("User signed in successfully!");
-    } catch (error) {
-        console.error("Error during sign in: " + error.message);
-    }
+{
+	// requitement is to converting string to number
+	const stringToNumber = function (str) {
+		return Number(str)
+	}
+	console.log(stringToNumber('1234'))
 }
 
-signUp();
-signIn();
+{
+	// requirement is to find sum sum of the number
+	var summation = function (num) {
+		return (num * (num + 1)) / 2
+	}
+	console.log(summation(2))
+}
+
+{
+	// requirement is to find the all the trues
+	function countSheeps(sheep) {
+		return sheep.filter(Boolean).length
+	}
+
+	const sheepArray = [
+		true,
+		true,
+		true,
+		false,
+		true,
+		true,
+		true,
+		true,
+		true,
+		false,
+		true,
+		false,
+		true,
+		false,
+		false,
+		true,
+		true,
+		true,
+		true,
+		true,
+		false,
+		false,
+		true,
+		true,
+	]
+
+	console.log(countSheeps(sheepArray))
+}
+
+{
+	// requirement is to find the smallest number and the biggest number
+	function highAndLow(numbers) {
+		const nums = numbers.split(' ').map(Number)
+		return `${Math.max(...nums)} ${Math.min(...nums)}`
+	}
+
+	console.log(highAndLow('1 2 -3 4 5'))
+	console.log(highAndLow('1 9 3 4 -5'))
+}
+
+{
+	// requirement is to find max and min number
+	function highAndLow(numbers) {
+		numbers = numbers.split(' ')
+		return Math.max(...numbers) + ' ' + Math.min(...numbers)
+	}
+
+	console.log(highAndLow('1 2 3 4 5'))
+}
+
+{
+	// requirement is to remove the gaps between the string
+	function noSpace(x) {
+		return x.replace(/\s+/g, '')
+	}
+
+	console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+}
+
+{
+	// requirement is to make a greeting function
+	function greet(name) {
+		return `Hello, ${name} how are you doing today?`
+		name
+	}
+
+	console.log(greet('John'))
+}
